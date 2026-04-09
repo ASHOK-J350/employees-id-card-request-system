@@ -1,0 +1,9 @@
+projection;
+strict ( 2 );
+
+define behavior for ZCIT_C_IDR_22EC301 alias IDRequest
+{
+  use create;
+  use update;
+  use delete;
+}

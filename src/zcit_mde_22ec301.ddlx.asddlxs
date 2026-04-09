@@ -1,0 +1,41 @@
+@Metadata.layer: #CORE
+
+@UI: { 
+  headerInfo: { 
+    typeName: 'ID Request', 
+    typeNamePlural: 'ID Requests', 
+    title: { type: #STANDARD, value: 'EmployeeName' } 
+  } 
+}
+
+annotate entity ZCIT_C_IDR_22EC301 with
+{
+  @UI.facet: [ { id: 'RequestDetails', purpose: #STANDARD, type: #IDENTIFICATION_REFERENCE, label: 'Request Details', position: 10 } ]
+  @UI.hidden: true
+  RequestID;
+
+  @EndUserText.label: 'Employee ID'
+  @UI: { lineItem: [ { position: 10 } ], 
+         identification: [ { position: 10 } ] }
+  @Search.defaultSearchElement: true
+  EmployeeID;
+
+  @EndUserText.label: 'Employee Name'
+  @UI: { lineItem: [ { position: 20 } ], 
+         identification: [ { position: 20 } ] }
+  @Search.defaultSearchElement: true
+  EmployeeName;
+
+  @EndUserText.label: 'Request Status (O/P/C)'
+  @UI: { lineItem: [ { position: 30 } ], 
+         identification: [ { position: 30 } ] }
+  RequestStatus;
+
+  @EndUserText.label: 'Office Location'
+  @UI: { lineItem: [ { position: 40 } ], 
+         identification: [ { position: 40 } ] }
+  OfficeLocation;
+
+  @UI.hidden: true
+  LastChangedAt;
+}

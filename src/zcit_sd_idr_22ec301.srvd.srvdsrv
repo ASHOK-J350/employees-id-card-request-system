@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for ID Request'
+define service ZCIT_SD_IDR_22EC301 {
+  expose ZCIT_C_IDR_22EC301 as IDRequest;
+}

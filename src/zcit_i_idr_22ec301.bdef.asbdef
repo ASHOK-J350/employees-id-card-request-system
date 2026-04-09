@@ -1,0 +1,25 @@
+unmanaged implementation in class zbp_cit_i_idr_22ec301 unique;
+strict ( 2 );
+
+define behavior for ZCIT_I_IDR_22EC301 alias IDRequest
+lock master
+authorization master ( instance )
+etag master LastChangedAt
+{
+  create;
+  update;
+  delete;
+
+  field ( readonly ) RequestID;
+  field ( readonly ) LastChangedAt;
+
+  mapping for zcit_idr_22ec301
+  {
+    RequestID      = request_id;
+    EmployeeID     = employee_id;
+    EmployeeName   = employee_name;
+    RequestStatus  = request_status;
+    OfficeLocation = office_location;
+    LastChangedAt  = last_changed_at;
+  }
+}
